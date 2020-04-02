@@ -1,5 +1,15 @@
 # Disaster Response Pipeline Project
 
+## Project Aim
+This project aims to classify messages received during disasters into suitable categories for quick action by relevant organisations. 
+
+## Project Description 
+The project uses NLP (Natural Language Processing) methodologies to process text messages and then applies Machine Learning to 
+classify the messages into the 36 available categories such as Food, Fire, Hospital etc.
+ 
+The project used Random Forest to classify the preprocessed messaged into the 36 categories. 
+
+
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
