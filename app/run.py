@@ -66,6 +66,34 @@ def index():
         }
     ]
     
+    #Graph 2
+    
+    category_names = list(df.columns[4:])
+    cat_counts = df[category_names].sum().nlargest()
+    cat_names = list(df[category_names].sum().nlargest().index)
+    
+    graphs = [
+        {
+            'data': [
+                Bar(
+                    x=cat_names,
+                    y=cat_counts
+                )
+            ],
+
+            'layout': {
+                'title': 'Distribution of Message Categories',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Category"
+                }
+            }
+        }
+    ]
+    
+    
     # encode plotly graphs in JSON
     ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
     graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
