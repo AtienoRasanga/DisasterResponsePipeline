@@ -9,6 +9,12 @@ classify the messages into the 36 available categories such as Food, Fire, Hospi
  
 The project used Random Forest to classify the preprocessed messaged into the 36 categories. 
 
+## Packages
+a) Pandas, Numpy (Data Processing)
+b) Sklearn (Machine Learning)
+b) NLTK (Text Processing)
+d) SqlAlchemy (Data Mining)
+
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
