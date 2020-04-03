@@ -45,6 +45,12 @@ def index():
     
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
+    
+    #Graph 2
+    
+    category_names = list(df.columns[4:])
+    cat_counts = df[category_names].sum().nlargest()
+    cat_names = list(df[category_names].sum().nlargest().index)
     graphs = [
         {
             'data': [
@@ -63,17 +69,9 @@ def index():
                     'title': "Genre"
                 }
             }
-        }
-    ]
-    
-    #Graph 2
-    
-    category_names = list(df.columns[4:])
-    cat_counts = df[category_names].sum().nlargest()
-    cat_names = list(df[category_names].sum().nlargest().index)
-    
-    graphs = [
-        {
+        },
+            
+            {
             'data': [
                 Bar(
                     x=cat_names,
@@ -90,8 +88,14 @@ def index():
                     'title': "Category"
                 }
             }
-        }
+         }
+        
     ]
+    
+    
+    
+        
+        
     
     
     # encode plotly graphs in JSON
